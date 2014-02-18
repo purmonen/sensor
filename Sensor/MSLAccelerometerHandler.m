@@ -9,12 +9,11 @@
 #import "MSLAccelerometerHandler.h"
 
 
+
 @interface MSLAccelerometerHandler ()
 
 @property (strong, nonatomic) CMMotionManager *motionManager;
 @property NSMutableArray *data;
-
--(void)handleAccelerationData:(CMAccelerometerData *)accelerationData;
 
 @end
 @implementation MSLAccelerometerHandler
@@ -49,6 +48,17 @@
 
 -(NSMutableArray *)getData {
     return self.data;
+}
+
+- (NSString *)getDataInCSV {
+    NSMutableString *csv = [NSMutableString stringWithString:@""];
+    int i;
+    for (i = 0; i < [self.data count]; i++) {
+        CMAccelerometerData *data = (CMAccelerometerData *)[self.data objectAtIndex:i];
+        CMAcceleration acc = data.acceleration;
+        [csv appendString:[NSString stringWithFormat:@",%f,%f,%f,%f", acc.x, acc.y, acc.z, data.timestamp]];
+    }
+	return [csv substringFromIndex:1];
 }
 
 @end

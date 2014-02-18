@@ -11,10 +11,11 @@
 
 @interface MSLAccelerometerHandler : NSObject
 
--(void)start;
--(void)stop;
--(NSMutableArray *)getData;
+- (void)start;
+- (void)stop;
+- (NSMutableArray *)getData;
+- (NSString *)getDataInCSV;
 
-+(MSLAccelerometerHandler *)initWithInterval:(double)interval;
++ (MSLAccelerometerHandler *)initWithInterval:(double)interval;
 
 @end

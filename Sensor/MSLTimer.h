@@ -13,6 +13,5 @@
 + (MSLTimer *)initWithBlock:(void (^)(NSString *))block;
 - (void)start;
 - (void)stop;
-- (NSString *)timeDifferenceString;
 
 @end

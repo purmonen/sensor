@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *accelerationDataLabel;
 @property BOOL isRunning;
 @property (weak, nonatomic) IBOutlet UIButton *startButton;
+@property (weak, nonatomic) IBOutlet UITextView *textView;
 
 - (IBAction)start:(UIButton *)sender;
 
@@ -43,7 +44,7 @@
     self.timer = [MSLTimer initWithBlock:^(NSString *timeDifference) {
         [self updateTimeLabel:timeDifference];
     }];
-    self.handler = [MSLAccelerometerHandler initWithInterval:.2];
+    self.handler = [MSLAccelerometerHandler initWithInterval:2];
 }
 
 
@@ -74,14 +75,16 @@
     if (!self.isRunning) {
         [self.timer start];
         [self.handler start];
-        [self.startButton setTitle:@"Stop" forState:UIControlStateNormal];
     } else {
     	[self.timer stop];
     	[self.handler stop];
-        [self.startButton setTitle:@"Start" forState:UIControlStateNormal];
+        
+        self.textView.text = [self.handler getDataInCSV];
     }
+    
     self.isRunning = !self.isRunning;
-}
+    [self.startButton setTitle:self.isRunning ? @"Stop" : @"Start" forState:UIControlStateNormal];
 
+}
 
 @end
