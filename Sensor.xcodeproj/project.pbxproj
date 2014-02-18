@@ -16,7 +16,6 @@
 		263AF29018B3713300325BD6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 263AF28F18B3713300325BD6 /* main.m */; };
 		263AF29418B3713300325BD6 /* MSLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 263AF29318B3713300325BD6 /* MSLAppDelegate.m */; };
 		263AF29718B3713300325BD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 263AF29518B3713300325BD6 /* Main.storyboard */; };
-		263AF29A18B3713300325BD6 /* MSLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 263AF29918B3713300325BD6 /* MSLViewController.m */; };
 		263AF29C18B3713300325BD6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 263AF29B18B3713300325BD6 /* Images.xcassets */; };
 		263AF2A318B3713300325BD6 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 263AF2A218B3713300325BD6 /* XCTest.framework */; };
 		263AF2A418B3713300325BD6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 263AF28318B3713300325BD6 /* Foundation.framework */; };
@@ -51,8 +50,6 @@
 		263AF29218B3713300325BD6 /* MSLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSLAppDelegate.h; sourceTree = "<group>"; };
 		263AF29318B3713300325BD6 /* MSLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSLAppDelegate.m; sourceTree = "<group>"; };
 		263AF29618B3713300325BD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		263AF29818B3713300325BD6 /* MSLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSLViewController.h; sourceTree = "<group>"; };
-		263AF29918B3713300325BD6 /* MSLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSLViewController.m; sourceTree = "<group>"; };
 		263AF29B18B3713300325BD6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		263AF2A118B3713300325BD6 /* SensorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SensorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		263AF2A218B3713300325BD6 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -121,8 +118,6 @@
 				263AF29218B3713300325BD6 /* MSLAppDelegate.h */,
 				263AF29318B3713300325BD6 /* MSLAppDelegate.m */,
 				263AF29518B3713300325BD6 /* Main.storyboard */,
-				263AF29818B3713300325BD6 /* MSLViewController.h */,
-				263AF29918B3713300325BD6 /* MSLViewController.m */,
 				2602936318B39DC10025E9A2 /* MSLRecordTrackViewController.h */,
 				2602936418B39DC10025E9A2 /* MSLRecordTrackViewController.m */,
 				2602936018B380C70025E9A2 /* MSLAccelerometerHandler.h */,
@@ -264,7 +259,6 @@
 				2602936218B380C70025E9A2 /* MSLAccelerometerHandler.m in Sources */,
 				263AF29418B3713300325BD6 /* MSLAppDelegate.m in Sources */,
 				2602936518B39DC10025E9A2 /* MSLRecordTrackViewController.m in Sources */,
-				263AF29A18B3713300325BD6 /* MSLViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
