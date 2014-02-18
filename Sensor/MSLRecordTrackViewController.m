@@ -8,14 +8,14 @@
 
 #import "MSLRecordTrackViewController.h"
 #import "MSLAccelerometerHandler.h"
+#import "MSLTimer.h"
 
 @interface MSLRecordTrackViewController ()
 
 
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 @property MSLAccelerometerHandler *handler;
-@property NSTimer *timer;
-@property NSDate *startTime;
+@property MSLTimer *timer;
 @property (weak, nonatomic) IBOutlet UILabel *accelerationDataLabel;
 @property BOOL isRunning;
 @property (weak, nonatomic) IBOutlet UIButton *startButton;
@@ -40,19 +40,16 @@
 {
     [super viewDidLoad];
     self.isRunning = NO;
-    self.startTime = [NSDate date];
-    self.handler = [MSLAccelerometerHandler initWithInterval:2];
+    self.timer = [MSLTimer initWithBlock:^(NSString *timeDifference) {
+        [self updateTimeLabel:timeDifference];
+    }];
+    self.handler = [MSLAccelerometerHandler initWithInterval:.2];
 }
 
 
-- (void)updateTimeLabel:(NSTimer *)timer {
-    int interval = -(int)[self.startTime timeIntervalSinceNow];
-    int seconds = interval % 60;
-    int minutes = (interval / 60) % 60;
-    int hour = interval / (60*60);
-    
-    self.timeLabel.text = [NSString stringWithFormat:@"%02d:%02d:%02d", hour, minutes, seconds];
-    
+- (void)updateTimeLabel:(NSString *)timeDifference
+{
+    self.timeLabel.text = timeDifference;
     NSMutableArray *data = [self.handler getData];
 
     if (![data count]) {
@@ -72,16 +69,14 @@
 }
 
 
-- (IBAction)start:(UIButton *)sender {
+- (IBAction)start:(UIButton *)sender
+{
     if (!self.isRunning) {
-        self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateTimeLabel:) userInfo:nil repeats:YES];
-        self.startTime = [NSDate date];
-        [self.timer fire];
+        [self.timer start];
         [self.handler start];
         [self.startButton setTitle:@"Stop" forState:UIControlStateNormal];
     } else {
-    	[self.timer invalidate];
-        self.timer = nil;
+    	[self.timer stop];
     	[self.handler stop];
         [self.startButton setTitle:@"Start" forState:UIControlStateNormal];
     }

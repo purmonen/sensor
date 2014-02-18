@@ -17,10 +17,7 @@
 -(void)handleAccelerationData:(CMAccelerometerData *)accelerationData;
 
 @end
-
-
 @implementation MSLAccelerometerHandler
-
 
 +(MSLAccelerometerHandler *)initWithInterval:(double)interval {
     MSLAccelerometerHandler *handler = [[MSLAccelerometerHandler alloc] init];
@@ -32,11 +29,9 @@
     return handler;
 }
 
-
 -(void)handleAccelerationData:(CMAccelerometerData *)accelerationData {
     [self.data addObject:accelerationData];
 }
-
 
 -(void)start {
     [self.motionManager startAccelerometerUpdatesToQueue:[NSOperationQueue currentQueue]
@@ -48,11 +43,9 @@
                                              }];
 }
 
-
 -(void)stop {
     [self.motionManager stopAccelerometerUpdates];
 }
-
 
 -(NSMutableArray *)getData {
     return self.data;
