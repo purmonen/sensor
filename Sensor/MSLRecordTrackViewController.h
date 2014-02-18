@@ -1,5 +1,5 @@
 //
-//  MSLViewController.h
+//  MSLRecordTrackViewController.h
 //  Sensor
 //
 //  Created by Sami Purmonen on 2014-02-18.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MSLViewController : UIViewController
+@interface MSLRecordTrackViewController : UIViewController
 
 @end

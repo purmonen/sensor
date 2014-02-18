@@ -7,6 +7,7 @@
 //
 
 #import "MSLViewController.h"
+#import "MSLAccelerometerHandler.h"
 
 @interface MSLViewController ()
 
@@ -17,7 +18,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSLog(@"Git works");
+    MSLAccelerometerHandler *handler = [MSLAccelerometerHandler initWithInterval:2];
+    [handler start];
+    NSLog(@"HANDLER STARTED");
     
 	// Do any additional setup after loading the view, typically from a nib.
 }

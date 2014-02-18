@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2602936218B380C70025E9A2 /* MSLAccelerometerHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 2602936118B380C70025E9A2 /* MSLAccelerometerHandler.m */; };
+		2602936518B39DC10025E9A2 /* MSLRecordTrackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2602936418B39DC10025E9A2 /* MSLRecordTrackViewController.m */; };
 		263AF28418B3713300325BD6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 263AF28318B3713300325BD6 /* Foundation.framework */; };
 		263AF28618B3713300325BD6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 263AF28518B3713300325BD6 /* CoreGraphics.framework */; };
 		263AF28818B3713300325BD6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 263AF28718B3713300325BD6 /* UIKit.framework */; };
@@ -34,6 +36,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2602936018B380C70025E9A2 /* MSLAccelerometerHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSLAccelerometerHandler.h; sourceTree = "<group>"; };
+		2602936118B380C70025E9A2 /* MSLAccelerometerHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSLAccelerometerHandler.m; sourceTree = "<group>"; };
+		2602936318B39DC10025E9A2 /* MSLRecordTrackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSLRecordTrackViewController.h; sourceTree = "<group>"; };
+		2602936418B39DC10025E9A2 /* MSLRecordTrackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSLRecordTrackViewController.m; sourceTree = "<group>"; };
 		263AF28018B3713200325BD6 /* Sensor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sensor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		263AF28318B3713300325BD6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		263AF28518B3713300325BD6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -117,6 +123,10 @@
 				263AF29518B3713300325BD6 /* Main.storyboard */,
 				263AF29818B3713300325BD6 /* MSLViewController.h */,
 				263AF29918B3713300325BD6 /* MSLViewController.m */,
+				2602936318B39DC10025E9A2 /* MSLRecordTrackViewController.h */,
+				2602936418B39DC10025E9A2 /* MSLRecordTrackViewController.m */,
+				2602936018B380C70025E9A2 /* MSLAccelerometerHandler.h */,
+				2602936118B380C70025E9A2 /* MSLAccelerometerHandler.m */,
 				263AF29B18B3713300325BD6 /* Images.xcassets */,
 				263AF28A18B3713300325BD6 /* Supporting Files */,
 			);
@@ -251,7 +261,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				263AF29018B3713300325BD6 /* main.m in Sources */,
+				2602936218B380C70025E9A2 /* MSLAccelerometerHandler.m in Sources */,
 				263AF29418B3713300325BD6 /* MSLAppDelegate.m in Sources */,
+				2602936518B39DC10025E9A2 /* MSLRecordTrackViewController.m in Sources */,
 				263AF29A18B3713300325BD6 /* MSLViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -461,6 +473,7 @@
 				263AF2B418B3713300325BD6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		263AF2B518B3713300325BD6 /* Build configuration list for PBXNativeTarget "SensorTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +482,7 @@
 				263AF2B718B3713300325BD6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
