@@ -8,13 +8,16 @@
 
 #import "MSLRecordTrackViewController.h"
 #import "MSLAccelerometerHandler.h"
+#import "MSLGPSHandler.h"
 #import "MSLTimer.h"
+
 
 @interface MSLRecordTrackViewController ()
 
 
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
-@property MSLAccelerometerHandler *handler;
+@property MSLAccelerometerHandler *accelerometerHandler;
+@property MSLGPSHandler * gpsHandler;
 @property MSLTimer *timer;
 @property (weak, nonatomic) IBOutlet UILabel *accelerationDataLabel;
 @property BOOL isRunning;
@@ -44,14 +47,16 @@
     self.timer = [MSLTimer initWithBlock:^(NSString *timeDifference) {
         [self updateTimeLabel:timeDifference];
     }];
-    self.handler = [MSLAccelerometerHandler initWithInterval:2];
+    self.accelerometerHandler = [MSLAccelerometerHandler initWithInterval:2];
+    self.gpsHandler=[MSLGPSHandler initWithPrecision:2];
+    [self.gpsHandler start];						
 }
 
 
 - (void)updateTimeLabel:(NSString *)timeDifference
 {
     self.timeLabel.text = timeDifference;
-    NSMutableArray *data = [self.handler getData];
+    NSMutableArray *data = [self.accelerometerHandler getData];
 
     if (![data count]) {
         NSLog(@"NO DATA");
@@ -74,12 +79,12 @@
 {
     if (!self.isRunning) {
         [self.timer start];
-        [self.handler start];
+        [self.accelerometerHandler start];
     } else {
     	[self.timer stop];
-    	[self.handler stop];
+    	[self.accelerometerHandler stop];
         
-        self.textView.text = [self.handler getDataInCSV];
+        self.textView.text = [self.accelerometerHandler getDataInCSV];
     }
     
     self.isRunning = !self.isRunning;

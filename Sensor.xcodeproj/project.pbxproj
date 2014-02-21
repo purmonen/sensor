@@ -23,6 +23,7 @@
 		263AF2A518B3713300325BD6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 263AF28718B3713300325BD6 /* UIKit.framework */; };
 		263AF2AD18B3713300325BD6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 263AF2AB18B3713300325BD6 /* InfoPlist.strings */; };
 		263AF2AF18B3713300325BD6 /* SensorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 263AF2AE18B3713300325BD6 /* SensorTests.m */; };
+		DAEC67EC18B768AA00A30F1C /* MSLGPSHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEC67EB18B768AA00A30F1C /* MSLGPSHandler.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,8 @@
 		263AF2AA18B3713300325BD6 /* SensorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SensorTests-Info.plist"; sourceTree = "<group>"; };
 		263AF2AC18B3713300325BD6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		263AF2AE18B3713300325BD6 /* SensorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SensorTests.m; sourceTree = "<group>"; };
+		DAEC67EA18B768AA00A30F1C /* MSLGPSHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSLGPSHandler.h; sourceTree = "<group>"; };
+		DAEC67EB18B768AA00A30F1C /* MSLGPSHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSLGPSHandler.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +95,8 @@
 				2602936118B380C70025E9A2 /* MSLAccelerometerHandler.m */,
 				2602936618B3C1360025E9A2 /* MSLTimer.h */,
 				2602936718B3C1360025E9A2 /* MSLTimer.m */,
+				DAEC67EA18B768AA00A30F1C /* MSLGPSHandler.h */,
+				DAEC67EB18B768AA00A30F1C /* MSLGPSHandler.m */,
 			);
 			name = Library;
 			sourceTree = "<group>";
@@ -268,6 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAEC67EC18B768AA00A30F1C /* MSLGPSHandler.m in Sources */,
 				263AF29018B3713300325BD6 /* main.m in Sources */,
 				2602936818B3C1360025E9A2 /* MSLTimer.m in Sources */,
 				2602936218B380C70025E9A2 /* MSLAccelerometerHandler.m in Sources */,
