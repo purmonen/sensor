@@ -11,7 +11,7 @@
 @interface MSLTimer : NSObject
 
 + (MSLTimer *)initWithBlock:(void (^)(NSString *))block;
-- (void)start;
+- (void)start;§
 - (void)stop;
 
 @end

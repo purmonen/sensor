@@ -85,6 +85,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		261C7D0D18B7603100A1772F /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				2602936018B380C70025E9A2 /* MSLAccelerometerHandler.h */,
+				2602936118B380C70025E9A2 /* MSLAccelerometerHandler.m */,
+				2602936618B3C1360025E9A2 /* MSLTimer.h */,
+				2602936718B3C1360025E9A2 /* MSLTimer.m */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
 		263AF27718B3713200325BD6 = {
 			isa = PBXGroup;
 			children = (
@@ -123,10 +134,7 @@
 				263AF29518B3713300325BD6 /* Main.storyboard */,
 				2602936318B39DC10025E9A2 /* MSLRecordTrackViewController.h */,
 				2602936418B39DC10025E9A2 /* MSLRecordTrackViewController.m */,
-				2602936018B380C70025E9A2 /* MSLAccelerometerHandler.h */,
-				2602936118B380C70025E9A2 /* MSLAccelerometerHandler.m */,
-				2602936618B3C1360025E9A2 /* MSLTimer.h */,
-				2602936718B3C1360025E9A2 /* MSLTimer.m */,
+				261C7D0D18B7603100A1772F /* Library */,
 				263AF29B18B3713300325BD6 /* Images.xcassets */,
 				263AF28A18B3713300325BD6 /* Supporting Files */,
 			);
